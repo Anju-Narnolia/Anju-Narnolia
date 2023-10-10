@@ -1,4 +1,4 @@
-<h1 align="center">For each open GitHub Issue, there's a developer waiting to solve it 💘</h1>
+<h1 align="center">For each open GitHub Issue, there's a developer waiting to solve it💘</h1>
 <hr>
 <h1 align="center">Hi 👋, I'm Anju-Narnolia</h1>
 <h3 align="center">A passionate frontend developer from India</h3>
