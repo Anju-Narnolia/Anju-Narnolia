@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 import ContactForm from './Cf';
-import Certificate from './Certificate';
 import ProjectG from './ProjectG';
 import myPhoto from "../img/myPhoto.jpg";
 
@@ -38,7 +37,7 @@ export default function Header() {
                         projects,
                         my aim is always to deliver a final product that surpasses expectations and makes a lasting impact.
                     </p>
-                    <img src={myPhoto} alt="my-photo" className="rounded-full  w-80 h-80 border-2 border-yellow-500 shadow-[0px_0px_10px_10px_rgba(234,179,8,15)]" />
+                    <img src={myPhoto} alt="me" className="rounded-full  w-80 h-80 border-2 border-yellow-500 shadow-[0px_0px_10px_10px_rgba(234,179,8,15)]" />
                 </div>
             </div>
 

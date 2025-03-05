@@ -7,7 +7,7 @@ export default function Footer() {
             <div className='flex w-full gap-10'>
                 <div className=" m-5  w-1/3 flex flex-col gap-5 justify-center">
                     <div className="flex gap-2 items-center">
-                        <img src={img1} />
+                        <img src={img1} alt="A"/>
                         <p className="text-yellow-500 text-xl uppercase">Anju Narnolia</p>
                     </div>
                     <p className="text-sm">Thank you for visiting! Let’s connect and create something amazing. Explore my work or reach out for collaborations. Built with passion—because great ideas deserve great execution!</p>
@@ -50,8 +50,8 @@ export default function Footer() {
                         </div>
                         <p className="text-sm">Address:</p>
                         <div className="flex gap-2 items-center ml-2">
-                            <i i className="fa-solid fa-location-dot text-yellow-500 text-xl"></i>
-                            <a className="text-sm text-gray-400">Charkhi Dadri , Haryana</a>
+                            <i className="fa-solid fa-location-dot text-yellow-500 text-xl"></i>
+                            <p className="text-sm text-gray-400">Charkhi Dadri , Haryana</p>
                         </div>
                     </div>
                 </div>
