@@ -7,9 +7,10 @@ import myPhoto from "../img/myPhoto.jpg";
 export default function Header() {
     const [search, setSearch] = useState("all");
     return (
-        <div className=" bg-black " id="home">
-            <div className="relative h-[80vh] object-cover">
-                <div className="relative z-10 text-white flex flex-col gap-8 justify-center items-center h-full w-full">
+        <div className="bg-black" id="home">
+
+            <div className="">
+                <div className=" text-white flex flex-col gap-8 justify-center items-center">
                     <span className="text-center text-7xl font-bold">
                         Hii There, I'm Anju Narnolia!
                     </span>
@@ -23,7 +24,7 @@ export default function Header() {
             </div>
 
             {/* About me */}
-            <div className="px-16 pt-16  " id="about" >
+            <div className="p-16" id="about" >
                 <p className="text-4xl font-extrabold  uppercase  text-yellow-500" >About Me</p>
                 <div className="flex justify-center gap-16 p-5">
                     <p className="w-1/2 p-5 text-white">
