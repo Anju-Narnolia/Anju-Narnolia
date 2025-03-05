@@ -7,11 +7,11 @@ import myPhoto from "../img/myPhoto.jpg";
 export default function Header() {
     const [search, setSearch] = useState("all");
     return (
-        <div className="bg-black" id="home">
+        <div className="" id="home">
 
             <div className="">
-                <div className=" text-white flex flex-col gap-8 justify-center items-center">
-                    <span className="text-center text-7xl font-bold">
+                <div className=" text-white flex h-[80vh] flex-col gap-8 justify-center items-center">
+                    <span className="text-center text-3xl md:text-7xl font-bold">
                         Hii There, I'm Anju Narnolia!
                     </span>
                     <span className="text-4xl uppercase font-extrabold text-yellow-500">
@@ -24,10 +24,10 @@ export default function Header() {
             </div>
 
             {/* About me */}
-            <div className="p-16" id="about" >
+            <div className="p-5 md:p-16" id="about" >
                 <p className="text-4xl font-extrabold  uppercase  text-yellow-500" >About Me</p>
-                <div className="flex justify-center gap-16 p-5">
-                    <p className="w-1/2 p-5 text-white">
+                <div className="flex justify-center gap-16 p-5 flex-col md:flex-row">
+                    <p className="md:w-1/2 md:p-5 text-white text-sm md:text-lg">
                         I'm a dedicated web designer with more than 2 years of experience in crafting clean,
                         modern, and functional websites. My primary focus is on creating user-friendly sites that
                         offer seamless experiences and address real-world challenges through thoughtful design and coding. I
@@ -50,7 +50,7 @@ export default function Header() {
             </div>
 
             {/* skills */}
-            <div className=" p-16" id="skill" >
+            <div className=" p-5" id="skill" >
                 <p className="text-3xl font-bold uppercase text-yellow-500 text-center"> Skills
                 </p>
                 <p className="font-thin text-center text-3xl p-5 text-white">
@@ -72,7 +72,7 @@ export default function Header() {
                     ].map((skill, index) => (
                         <motion.div
                             key={skill.id}
-                            className={`${skill.class} text-5xl m-2`}
+                            className={`${skill.class} text-5xl m-2  `}
                             style={{ color: skill.color }}
                             initial={{ x: -200, opacity: 0 }}
                             whileInView={{ x: 0, opacity: 1 }}
@@ -84,10 +84,10 @@ export default function Header() {
             </div>
 
             {/* my Expertise */}
-            <div className=" p-16 " id="expertise" >
+            <div className=" md:p-16 m-5" id="expertise" >
                 <p className=" text-3xl font-bold uppercase text-yellow-500 text-center">My Expertise </p>
-                <div className=" flex flex-col text-white px-14 w-10/12 justify-center">
-                    <div className="flex flex-col justify-start w-3/5 p-5 rounded-md  mx-5 mt-5  border-2 border-yellow-500 hover:shadow-lg hover:shadow-amber-500 hover:scale-105 duration-500 hover:bg-opacity-10 hover:bg-white">
+                <div className=" flex flex-col text-white px-14 md:w-10/12 justify-center">
+                    <div className="flex flex-col justify-start md:w-3/5 p-5 rounded-md  mx-5 mt-5  border-2 border-yellow-500 hover:shadow-lg hover:shadow-amber-500 hover:scale-105 duration-500 hover:bg-opacity-10 hover:bg-white">
                         <div className="flex justify-start gap-5 p-2">
                             <i className="fa-solid fa-feather-pointed  text-3xl rounded-md text-yellow-500"></i>
                             <p className="font-bold text-xl justify-center">UI/UX Design</p>
@@ -95,7 +95,7 @@ export default function Header() {
                         <span>I design intuitive and visually appealing user interfaces that enhance user experiences. I ensure your digital product is engaging and aligned with your brand identity.</span>
                     </div>
                     <div className="h-10 w-1/2 border-r-2 border-yellow-500 " ></div>
-                    <div className=" flex flex-col ml-80 w-3/5 p-5 rounded-md   border-2 border-yellow-500 hover:shadow-lg hover:shadow-amber-500 hover:scale-105 duration-500 hover:bg-opacity-10 hover:bg-white">
+                    <div className=" flex flex-col md:ml-80 md:w-3/5 p-5 rounded-md border-2 border-yellow-500 hover:shadow-lg hover:shadow-amber-500 hover:scale-105 duration-500 hover:bg-opacity-10 hover:bg-white">
                         <div className="flex justify-start gap-5 p-2 ">
                             <i className="fa-solid fa-code text-3xl rounded-md text-yellow-500"></i>
                             <p className="font-bold text-xl">Website Design & Development</p>
@@ -106,7 +106,7 @@ export default function Header() {
                         </span>
                     </div>
                     <div className="h-10 w-1/2 border-r-2 border-yellow-500 " ></div>
-                    <div className="p-5  mx-5 rounded-md w-3/5  border-2 border-yellow-500 hover:shadow-lg hover:shadow-amber-500 hover:scale-105 duration-500 hover:bg-opacity-10 hover:bg-white">
+                    <div className="p-5  mx-5 rounded-md md:w-3/5  border-2 border-yellow-500 hover:shadow-lg hover:shadow-amber-500 hover:scale-105 duration-500 hover:bg-opacity-10 hover:bg-white">
                         <div className="flex justify-start gap-5 p-2 ">
                             <i className="fa-brands fa-wordpress text-3xl text-yellow-500 rounded-md"></i>
                             <p className="font-bold text-xl">Wordpress</p>
@@ -114,7 +114,7 @@ export default function Header() {
                         <span>I build websites on WordPress, making them easy to update and manage. It's a great choice for blogs, small businesses, or portfolios.</span>
                     </div>
                     <div className="h-10 w-1/2 border-r-2 border-yellow-500 " ></div>
-                    <div className="ml-80 w-3/5 p-5 rounded-md border-2 border-yellow-500 hover:shadow-lg hover:shadow-amber-500 hover:scale-105 duration-500 hover:bg-opacity-10 hover:bg-white flex flex-col">
+                    <div className="md:ml-80 md:w-3/5 p-5 rounded-md border-2 border-yellow-500 hover:shadow-lg hover:shadow-amber-500 hover:scale-105 duration-500 hover:bg-opacity-10 hover:bg-white flex flex-col">
                         <div className="flex justify-start gap-5 p-2">
                             <i className="fa-solid fa-pen-to-square  text-3xl  rounded-md text-yellow-500"></i>
                             <p className="font-bold text-xl">Content Writing</p>
@@ -129,7 +129,7 @@ export default function Header() {
                 <div className="flex justify-center">
                     <h1 className="font-bold text-3xl text-center text-yellow-500 border-b-4 my-5 border-gray-800" >Explore My Projects: From Concept to Code</h1>
                 </div>
-                <div className="flex flex-row justify-center gap-5">
+                <div className="flex flex-wrap justify-center gap-5">
                     <p className={`  hover:bg-gray-700 ${search === "all" ? " text-yellow-500 " : "text-white"} px-10 rounded-lg py-2 font-bold cursor-pointer border-white border-2 `} onClick={() => setSearch("all")} >All</p>
                     <p className={`  hover:bg-gray-700 ${search === "html" ? " text-yellow-500" : "text-white"} px-10 rounded-lg py-2 font-bold cursor-pointer border-white border-2`} onClick={() => setSearch("html")}     >HTML</p>
                     <p className={`  hover:bg-gray-700 ${search === "react" ? " text-yellow-500" : "text-white"} px-10 rounded-lg py-2 font-bold cursor-pointer border-white border-2`} onClick={() => setSearch("react")}    >React</p>
@@ -143,8 +143,8 @@ export default function Header() {
             <div className=' py-16' id="contact" >
                 <p className=" text-3xl font-bold  uppercase  text-yellow-500 text-center">
                     Get In Touch</p>
-                <div className="flex flex-row">
-                    <div className='w-1/2 items-center flex justify-center flex-col'>
+                <div className="flex flex-col md:flex-row">
+                    <div className=' w-full md:w-1/2 items-center flex justify-center flex-col'>
                         <div>
                             <p className='text-5xl text-white font-bold text-center box py-10 px-5'>Have a project in mind? Let’s work together!</p>
                             <div className='mx-20 text-white'>

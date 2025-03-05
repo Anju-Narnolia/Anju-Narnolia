@@ -24,7 +24,7 @@ const projects = [
     {
         id: "3",
         title: "ReadNews",
-        search: "react",
+        Search: "react",
         description: "A responsive news platform allowing users to browse the latest news across various categories with real-time updates.",
         techStack: "React.js, Bootstrap, NewsAPI",
         img: "https://via.placeholder.com/300",
@@ -44,7 +44,7 @@ const projects = [
     {
         id: "5",
         title: "Immigration Website",
-        search: "html",
+        Search: "html",
         description: "An informative website providing guidance and resources for immigration processes with an intuitive user experience.",
         techStack: "Wordpress",
         img: "https://via.placeholder.com/300",
@@ -55,7 +55,7 @@ const projects = [
 
 function ProjectG({ result }) {
     return (
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:p-16 p-4">
             {projects.filter((project) => result === "all" || project.Search === result)
                 .map((project) => (
                     <motion.div key={project.id} className="relative w-full h-64 overflow-hidden rounded-lg group">

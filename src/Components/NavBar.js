@@ -1,5 +1,5 @@
-import { useState } from "react";
 
+import React, { useState } from "react";
 export default function NavBar() {
     const [menuOpen, setMenuOpen] = useState(false);
 
@@ -7,6 +7,7 @@ export default function NavBar() {
         const section = document.getElementById(id);
         if (section) {
             section.scrollIntoView({ behavior: "smooth" });
+            setMenuOpen(false); // Close mobile menu after clicking
         }
     }
 
@@ -18,23 +19,24 @@ export default function NavBar() {
                 </div>
                 <nav className="hidden md:flex">
                     <ul className="flex gap-5 font-bold">
-                        <p onClick={() => scrollToSection("home")} className="hover:text-gray-400">Home</p>
-                        <p onClick={() => scrollToSection("about")} className="hover:text-gray-400">About Me</p>
-                        <p  onClick={() => scrollToSection("skill")} className="hover:text-gray-400">Skill</p>
-                        <p  onClick={() => scrollToSection("expertise")} className="hover:text-gray-400">Expertise</p>
-                        <p  onClick={() => scrollToSection("project")} className="hover:text-gray-400">Project</p>
-                        <p  onClick={() => scrollToSection("contact")} className="hover:text-gray-400">Contact Me</p>
-                        <a href="https://drive.google.com/file/d/1pV0g9g6wY0pzIDyNqlzIsruASsaYVNQG/view?usp=sharing" target="_blank" rel="noreferrer" className="hover:text-gray-300">
-                            <button className="bg-gray-200 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded flex items-center">
-                                <svg className="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                    <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
-                                </svg>
-                                <span>Download Resume</span>
-                            </button>
-                        </a>
+                        <li onClick={() => scrollToSection("home")} className="hover:text-gray-400 cursor-pointer">Home</li>
+                        <li onClick={() => scrollToSection("about")} className="hover:text-gray-400 cursor-pointer">About Me</li>
+                        <li onClick={() => scrollToSection("skill")} className="hover:text-gray-400 cursor-pointer">Skill</li>
+                        <li onClick={() => scrollToSection("expertise")} className="hover:text-gray-400 cursor-pointer">Expertise</li>
+                        <li onClick={() => scrollToSection("project")} className="hover:text-gray-400 cursor-pointer">Project</li>
+                        <li onClick={() => scrollToSection("contact")} className="hover:text-gray-400 cursor-pointer">Contact Me</li>
+                        <li>
+                            <a href="https://drive.google.com/file/d/1pV0g9g6wY0pzIDyNqlzIsruASsaYVNQG/view?usp=sharing" target="_blank" rel="noreferrer" className="hover:text-gray-300">
+                                <button className="bg-gray-200 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded flex items-center">
+                                    <svg className="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                        <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
+                                    </svg>
+                                    <span>Download Resume</span>
+                                </button>
+                            </a>
+                        </li>
                     </ul>
                 </nav>
-                {/* Mobile Menu Button */}
                 <div className="md:hidden">
                     <button onClick={() => setMenuOpen(!menuOpen)} className="text-4xl">
                         &#8801;
@@ -46,12 +48,22 @@ export default function NavBar() {
             {menuOpen && (
                 <div className="md:hidden bg-blue-950 text-white p-4">
                     <ul className="flex flex-col gap-4 font-bold">
-                        <p onClick={() => scrollToSection("home")}>Home</p>
-                        <p onClick={() => scrollToSection("about")}>About Me</p>
-                        <p onClick={() => scrollToSection("skill")}>Skill</p>
-                        <p onClick={() => scrollToSection("expertise")}>Expertise</p>
-                        <p onClick={() => scrollToSection("project")}>Project</p>
-                        <p onClick={() => scrollToSection("contact")}>Contact Me</p>
+                        <li onClick={() => scrollToSection("home")} className="hover:text-gray-400 cursor-pointer">Home</li>
+                        <li onClick={() => scrollToSection("about")} className="hover:text-gray-400 cursor-pointer">About Me</li>
+                        <li onClick={() => scrollToSection("skill")} className="hover:text-gray-400 cursor-pointer">Skill</li>
+                        <li onClick={() => scrollToSection("expertise")} className="hover:text-gray-400 cursor-pointer">Expertise</li>
+                        <li onClick={() => scrollToSection("project")} className="hover:text-gray-400 cursor-pointer">Project</li>
+                        <li onClick={() => scrollToSection("contact")} className="hover:text-gray-400 cursor-pointer">Contact Me</li>
+                        <li className="pt-2">
+                            <a href="https://drive.google.com/file/d/1pV0g9g6wY0pzIDyNqlzIsruASsaYVNQG/view?usp=sharing" target="_blank" rel="noreferrer" className="hover:text-gray-300">
+                                <button className="bg-gray-200 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded flex items-center">
+                                    <svg className="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                        <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
+                                    </svg>
+                                    <span>Download Resume</span>
+                                </button>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             )}
