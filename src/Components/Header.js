@@ -5,32 +5,46 @@ import ProjectG from "./ProjectG";
 import myPhoto from "../img/myPhoto.jpg";
 
 export default function Header() {
+  function scrollToSection(id) {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  }
   const [search, setSearch] = useState("all");
   return (
     <div id="home">
-      <section className="h-[95vh] flex items-center relative pt-16 bg-[#0E0E0E]">
+      <section className="h-[100vh] flex items-center relative md:pt-24 bg-[#0E0E0E] p-5">
         <div className="absolute right-0 top-1/4 w-1/2 h-px bg-yellow-500/30"></div>
         <div className="absolute left-0 bottom-1/4 w-1/3 h-px bg-yellow-500/30"></div>
         <div className="absolute right-10 top-1/3 w-px h-1/3 bg-yellow-500/30"></div>
 
-        <div className="container mx-auto px-4 py-16 md:py-0">
+        <div className="container mx-auto px-4 py-20 md:py-0">
           <div className="max-w-4xl">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 font-playfair">
+            <h1 className="text-2xl md:text-4xl md:text-6xl lg:text-7xl font-bold mb-4 font-playfair">
               <span className="text-white">Hello, I'm </span>
               <span className="text-yellow-500">Anju Narnolia</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-6">
-              Frontend Web Developer | React & Next.js Expert
+            <p className="text-xl md:text-2xl text-gray-300 mb-8">
+              Frontend Web Developer | React Expert
             </p>
             <p className="text-gray-400 mb-10 text-lg">
               I craft elegant, high-performance web applications with modern
               technologies and a focus on user experience.
             </p>
             <div className="flex flex-wrap gap-4 font-bold">
-              <a href="#project">
-                <button className=" bg-yellow-500 py-4 px-8 hover:shadow-yellow-500 shadow-[0_0_10px_2px] rounded-lg">View My Work</button><p></p>
+              <a href="#project" onClick={() => scrollToSection("project")}>
+                <button className=" bg-yellow-500 md:py-4 md:px-8 px-4 py-2 hover:shadow-yellow-500 shadow-[0_0_10px_2px] rounded-lg">
+                  View My Work
+                </button>
+                <p></p>
               </a>
-              <a href="#contact" className="text-yellow-500 border-yellow-500/30 border py-4 px-8 rounded-lg hover:shadow-[0_0_10px_2px] shadow-yellow-500 hover:bg-yellow-500/5 transition-all duration-300">Contact Me
+              <a
+                href="#contact"
+                onClick={() => scrollToSection("contact")}
+                className="text-yellow-500 border-yellow-500/30 border md:py-4 md:px-8 px-4 py-2 rounded-lg hover:shadow-[0_0_10px_2px] shadow-yellow-500 hover:bg-yellow-500/5 transition-all duration-300"
+              >
+                Contact Me
               </a>
             </div>
           </div>
@@ -41,14 +55,14 @@ export default function Header() {
         <div className="flex justify-center gap-16 flex-col md:flex-row">
           <div className="w-full flex justify-center md:w-1/2">
             <div className="relative">
-              <div className="w-96 h-96 rounded-full overflow-hidden border-4 border-yellow-500 animate-fade-in">
-                <img src={myPhoto} alt="me" className=" " />
+              <div className="md:w-96 md:h-96 w-60 h-60 rounded-full overflow-hidden border-4 border-yellow-500 animate-fade-in">
+                <img src={myPhoto} alt="me" />
               </div>
-              <div className="absolute top-0 w-96 h-96 rounded-full border border-yellow-500 animate-glow"></div>
+              <div className="absolute top-0 md:w-96 md:h-96 w-60 h-60 rounded-full border border-yellow-500 animate-glow"></div>
             </div>
           </div>
           <div className="md:w-1/2 md:p-5 text-white text-sm md:text-[20px] flex flex-col gap-4 font-light ">
-            <div className="text-4xl font-extrabold uppercase flex gap-2 font-playfair">
+            <div className="text-2xl md:text-4xl font-extrabold uppercase flex gap-2 font-playfair">
               <p className="text-white">About</p>
               <p className="text-yellow-500">Me</p>
             </div>
@@ -83,7 +97,7 @@ export default function Header() {
       </div>
 
       {/* marque */}
-      <div className="marquee bg-white text-black w-full text-3xl font-bold flex my-5 ">
+      <div className="marquee bg-white text-black w-full text-xl lg:text-3xl font-bold flex my-5 ">
         <a href="#contact" className="mx-4 cursor-pointer">
           🚀 Open to Work!{" "}
         </a>
@@ -99,15 +113,15 @@ export default function Header() {
         </a>
       </div>
       {/* skills */}
-      <div className=" pb-11" id="skill">
-        <p className="text-4xl font-bold uppercase text-yellow-500  text-center font-playfair">
+      <div className="p-10 pb-11" id="skill">
+        <p className="text-2xl md:text-4xl font-bold uppercase text-yellow-500  text-center font-playfair">
           {" "}
           Skills
         </p>
-        <p className="font-thin text-center text-3xl p-5 text-white">
+        <p className="font-thin text-center text-xl md:text-3xl p-5 text-white">
           The skill, tools and technology I use:
         </p>
-        <div className="flex flex-wrap gap-5 justify-center overflow-hidden">
+        <div className="flex flex-wrap gap-5 overflow-visible">
           {[
             { id: 1, class: "fa-brands fa-java", color: "#007396" },
             { id: 2, class: "fa-brands fa-js", color: "#F7DF1E" },
@@ -123,9 +137,9 @@ export default function Header() {
           ].map((skill, index) => (
             <motion.div
               key={skill.id}
-              className={`${skill.class} text-4xl m-2  `}
+              className={`${skill.class} text-2xl md:text-4xl md:m-2  `}
               style={{ color: skill.color }}
-              initial={{ x: -200, opacity: 0 }}
+              initial={{ x: -50, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               viewport={{ once: false, amount: 0.1 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
@@ -135,8 +149,8 @@ export default function Header() {
       </div>
 
       {/* my Expertise */}
-      <div className=" md:p-16 P-5 bg-[#0E0E0E]" id="expertise">
-        <p className="text-4xl font-bold uppercase text-yellow-500  text-center font-playfair">
+      <div className=" md:p-16 py-10 bg-[#0E0E0E]" id="expertise">
+        <p className="text-2xl md:text-4xl font-bold uppercase text-yellow-500  text-center font-playfair">
           My Expertise
         </p>
         <div className=" flex flex-col text-white px-14 md:w-10/12 justify-center">
@@ -193,10 +207,11 @@ export default function Header() {
           </div>
         </div>
       </div>
+
       {/* project */}
-      <div id="project">
-        <div className=" px-10 py-14 items-center flex  flex-col ">
-          <h1 className=" text-4xl font-bold  uppercase  text-yellow-500  text-center font-playfair">
+      <div id="project" className="p-5">
+        <div className="px-5 py-14 text-center flex  flex-col ">
+          <h1 className=" text-2xl md:text-4xl font-bold  uppercase  text-yellow-500  text-center font-playfair">
             My Projects
           </h1>
 
@@ -251,9 +266,9 @@ export default function Header() {
       </div>
 
       {/* Contact me */}
-      <div className="bg-[#0E0E0E] p-16" id="contact">
+      <div className="bg-[#0E0E0E] p-10" id="contact">
         <div className="pb-10 items-center flex  flex-col gap-5">
-          <p className=" text-4xl font-bold  uppercase  text-yellow-500  text-center font-playfair">
+          <p className=" text-2xl md:text-4xl font-bold  uppercase  text-yellow-500  text-center font-playfair">
             Get In Touch
           </p>
           <span className="text-gray-300 max-w-2xl text-center">
@@ -265,7 +280,7 @@ export default function Header() {
         <div className="grid grid-cols-1 md:grid-cols-2 pl-5">
           <div className="flex flex-col">
             <div className="flex flex-col gap-5">
-              <p className="text-4xl text-yellow-500  font-bold font-playfair">
+              <p className="text-2xl md:text-4xl text-yellow-500  font-bold font-playfair">
                 Contact Information
               </p>
               <div className="flex gap-3">
@@ -302,24 +317,24 @@ export default function Header() {
               </div>
             </div>
             <div className="py-5">
-              <p className="text-4xl text-white font-bold font-playfair">
+              <p className="text-2xl md:text-4xl text-white font-bold font-playfair">
                 Contact With Me
               </p>
-              <div className="flex flex-wrap space-x-6 gap-2  mt-6 text-2xl text-yellow-500">
+              <div className="flex flex-wrap md:space-x-6 gap-3  mt-6 text-2xl text-yellow-500">
                 <a href="https://www.linkedin.com/in/anju-narnolia-">
-                  <i className="fa-brands fa-linkedin cursor-pointer   border border-yellow-500 px-4 py-3 rounded-full hover:bg-yellow-500 hover:text-black transition-all duration-300 p"></i>
+                  <i className="fa-brands fa-linkedin cursor-pointer   border border-yellow-500 px-3 md:px-4 py-3 rounded-full hover:bg-yellow-500 hover:text-black transition-all duration-300 p"></i>
                 </a>
                 <a href="https://github.com/Anju-Narnolia">
-                  <i className="fa-brands fa-github cursor-pointer   border border-yellow-500 px-4 py-3 rounded-full hover:bg-yellow-500 hover:text-black transition-all duration-300"></i>
+                  <i className="fa-brands fa-github cursor-pointer   border border-yellow-500 px-3 md:px-4 py-3 rounded-full hover:bg-yellow-500 hover:text-black transition-all duration-300"></i>
                 </a>
                 <a href="https://github.com/Anju-Narnolia">
-                  <i className="fa-brands fa-pinterest cursor-pointer  border border-yellow-500 px-4 py-3 rounded-full hover:bg-yellow-500 hover:text-black transition-all duration-300"></i>
+                  <i className="fa-brands fa-pinterest cursor-pointer  border border-yellow-500 px-3 md:px-4 py-3 rounded-full hover:bg-yellow-500 hover:text-black transition-all duration-300"></i>
                 </a>
                 <a href="https://www.instagram.com/anju__narnolia">
-                  <i className="fa-brands fa-instagram cursor-pointer   border border-yellow-500 px-4 py-3 rounded-full hover:bg-yellow-500 hover:text-black transition-all duration-300"></i>
+                  <i className="fa-brands fa-instagram cursor-pointer   border border-yellow-500 px-3 md:px-4 py-3 rounded-full hover:bg-yellow-500 hover:text-black transition-all duration-300"></i>
                 </a>
                 <a href="mailto:anjunarnolia93750@gmail.com">
-                  <i className="fa-solid fa-envelope cursor-pointer   border border-yellow-500 px-4 py-3 rounded-full hover:bg-yellow-500 hover:text-black transition-all duration-300 "></i>
+                  <i className="fa-solid fa-envelope cursor-pointer   border border-yellow-500 px-3 md:px-4 py-3 rounded-full hover:bg-yellow-500 hover:text-black transition-all duration-300 "></i>
                 </a>
               </div>
             </div>

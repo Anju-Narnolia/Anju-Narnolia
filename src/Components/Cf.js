@@ -9,8 +9,8 @@ function ContactForm() {
   }
   return (
     <>
-      <div className="border border-opacity-30 border-yellow-500 bg-transparent text-white px-10 py-8">
-        <p className="text-4xl text-yellow-500 font-bold font-playfair">
+      <div className="border border-opacity-30 border-yellow-500 bg-transparent text-white p-3 md:px-10 py-8">
+        <p className=" text-2xl md:text-4xl text-yellow-500 font-bold font-playfair px-3">
           Send Me a Message{" "}
         </p>
         <form onSubmit={msgChange}>

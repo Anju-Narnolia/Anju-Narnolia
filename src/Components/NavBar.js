@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   function scrollToSection(id) {
     const section = document.getElementById(id);
@@ -9,11 +10,26 @@ export default function NavBar() {
       setMenuOpen(false); // Close mobile menu after clicking
     }
   }
-
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
-    <div className="sticky top-0 left-0 right-0 z-20 w-full bg-black">
+    <div className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled
+           ? "bg-black/90 backdrop-blur-md shadow-lg"
+           : "bg-transparent py-5"
+       }
+      `}
+    >   
       <div className="flex justify-between items-center px-5 py-4 text-white">
-        <div className="flex gap-1 items-center text-4xl font-playfair uppercase font-bold">
+        <div className="flex gap-1 items-center md:text-4xl text-2xl font-playfair uppercase font-bold">
           <p className="text-white">Anju </p>
           <p className="text-yellow-500 "> Narnolia</p>
         </div>
