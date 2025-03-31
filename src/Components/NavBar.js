@@ -22,12 +22,14 @@ export default function NavBar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <div className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled
-           ? "bg-black/90 backdrop-blur-md shadow-lg"
-           : "bg-transparent py-5"
-       }
+    <div
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        isScrolled
+          ? "bg-black/90 backdrop-blur-md shadow-lg"
+          : "bg-transparent py-5"
+      }
       `}
-    >   
+    >
       <div className="flex justify-between items-center px-5 py-4 text-white">
         <div className="flex gap-1 items-center md:text-4xl text-2xl font-playfair uppercase font-bold">
           <p className="text-white">Anju </p>
@@ -72,7 +74,7 @@ export default function NavBar() {
                 rel="noreferrer"
                 className="hover:text-gray-300"
               >
-                <button className="bg-gray-200 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded flex items-center">
+                <button className="bg-yellow-400 hover:bg-yellow-500 hover:shadow-yellow-500 shadow-[0_0_10px_2px] text-gray-800 font-bold py-2 px-4 rounded flex items-center">
                   <svg
                     className="fill-current w-4 h-4 mr-2"
                     xmlns="http://www.w3.org/2000/svg"
@@ -88,14 +90,14 @@ export default function NavBar() {
         </nav>
         <div className="md:hidden">
           <button onClick={() => setMenuOpen(!menuOpen)} className="text-4xl">
-            &#8801;
+            {menuOpen ? "\u2715":"\u2261"}
           </button>
         </div>
       </div>
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden bg-blue-950 text-white p-4">
+        <div className="md:hidden bg-black text-white p-4">
           <ul className="flex flex-col gap-4 font-bold">
             <li
               onClick={() => scrollToSection("home")}
@@ -109,12 +111,7 @@ export default function NavBar() {
             >
               About Me
             </li>
-            <li
-              onClick={() => scrollToSection("skill")}
-              className="hover:text-gray-400 cursor-pointer"
-            >
-              Skill
-            </li>
+
             <li
               onClick={() => scrollToSection("expertise")}
               className="hover:text-gray-400 cursor-pointer"
@@ -140,7 +137,7 @@ export default function NavBar() {
                 rel="noreferrer"
                 className="hover:text-gray-300"
               >
-                <button className="bg-gray-200 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded flex items-center">
+                <button className="bg-yellow-400 hover:bg-yellow-500 hover:shadow-yellow-500 shadow-[0_0_10px_2px] text-gray-800 font-bold py-2 px-4 rounded flex items-center">
                   <svg
                     className="fill-current w-4 h-4 mr-2"
                     xmlns="http://www.w3.org/2000/svg"

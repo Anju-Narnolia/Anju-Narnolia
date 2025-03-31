@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function ContactForm() {
   const [formData, setFormData] = useState({
@@ -8,6 +8,14 @@ function ContactForm() {
   });
 
   const [msg, setMsg] = useState("");
+
+  useEffect(() => {
+    if (!msg) return; 
+    const timer = setTimeout(() => {
+      setMsg(""); 
+    }, 5000);
+    return () => clearTimeout(timer); 
+  }, [msg]); 
 
   function handleChange(event) {
     const { name, value } = event.target;
@@ -19,7 +27,8 @@ function ContactForm() {
 
   async function handleSubmit(event) {
     event.preventDefault();
-   const scriptURL = "https://script.google.com/macros/s/AKfycbx3cfYPYnZ6OwiBSzE0c3gSzvs-3RLcohwdNPeFKbhI93Y_bk524H2lexhTH5f3A_I/exec";
+    const scriptURL =
+      "https://script.google.com/macros/s/AKfycbx3cfYPYnZ6OwiBSzE0c3gSzvs-3RLcohwdNPeFKbhI93Y_bk524H2lexhTH5f3A_I/exec";
 
     try {
       const response = await fetch(scriptURL, {
@@ -99,7 +108,7 @@ function ContactForm() {
               Submit
             </button>
           </div>
-          <p className="text-lg font-bold text-center">{msg}</p>
+          {msg && <p className="text-lg font-bold text-center">{msg}</p>}
         </div>
       </form>
     </div>
@@ -107,4 +116,3 @@ function ContactForm() {
 }
 
 export default ContactForm;
-

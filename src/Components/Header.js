@@ -5,12 +5,14 @@ import ProjectG from "./ProjectG";
 import myPhoto from "../img/myPhoto.jpg";
 
 export default function Header() {
+
   function scrollToSection(id) {
     const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
     }
   }
+
   const [search, setSearch] = useState("all");
   return (
     <div id="home">
@@ -21,7 +23,7 @@ export default function Header() {
 
         <div className="container mx-auto px-4 py-20 md:py-0">
           <div className="max-w-4xl">
-            <h1 className="text-2xl md:text-4xl md:text-6xl lg:text-7xl font-bold mb-4 font-playfair">
+            <h1 className="text-2xl md:text-4xl  lg:text-7xl font-bold mb-4 font-playfair">
               <span className="text-white">Hello, I'm </span>
               <span className="text-yellow-500">Anju Narnolia</span>
             </h1>
@@ -33,19 +35,18 @@ export default function Header() {
               technologies and a focus on user experience.
             </p>
             <div className="flex flex-wrap gap-4 font-bold">
-              <a href="#project" onClick={() => scrollToSection("project")}>
+              <p onClick={() => scrollToSection("project")}>
                 <button className=" bg-yellow-500 md:py-4 md:px-8 px-4 py-2 hover:shadow-yellow-500 shadow-[0_0_10px_2px] rounded-lg">
                   View My Work
                 </button>
                 <p></p>
-              </a>
-              <a
-                href="#contact"
+              </p>
+              <p
                 onClick={() => scrollToSection("contact")}
                 className="text-yellow-500 border-yellow-500/30 border md:py-4 md:px-8 px-4 py-2 rounded-lg hover:shadow-[0_0_10px_2px] shadow-yellow-500 hover:bg-yellow-500/5 transition-all duration-300"
               >
                 Contact Me
-              </a>
+              </p>
             </div>
           </div>
         </div>
@@ -118,10 +119,10 @@ export default function Header() {
           {" "}
           Skills
         </p>
-        <p className="font-thin text-center text-xl md:text-3xl p-5 text-white">
+        <p className="font-thin text-center text-xl md:text-2xl p-5 text-white">
           The skill, tools and technology I use:
         </p>
-        <div className="flex flex-wrap gap-5 overflow-visible">
+        <div className="flex flex-wrap gap-5 overflow-visible justify-center ">
           {[
             { id: 1, class: "fa-brands fa-java", color: "#007396" },
             { id: 2, class: "fa-brands fa-js", color: "#F7DF1E" },
@@ -137,7 +138,7 @@ export default function Header() {
           ].map((skill, index) => (
             <motion.div
               key={skill.id}
-              className={`${skill.class} text-2xl md:text-4xl md:m-2  `}
+              className={`${skill.class} text-3xl md:text-6xl md:m-2  `}
               style={{ color: skill.color }}
               initial={{ x: -50, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
@@ -210,7 +211,7 @@ export default function Header() {
 
       {/* project */}
       <div id="project" className="p-5">
-        <div className="px-5 py-14 text-center flex  flex-col ">
+        <div className="px-5 py-14 text-center flex  flex-col items-center ">
           <h1 className=" text-2xl md:text-4xl font-bold  uppercase  text-yellow-500  text-center font-playfair">
             My Projects
           </h1>
@@ -291,7 +292,7 @@ export default function Header() {
                   <p className="text-white text-xl">Email: </p>
                   <a
                     href="mailto:anjunarnolia93750@gmail.com"
-                    className="text-gray-400 hover:bg-yellow-500 "
+                    className="text-gray-400 hover:text-yellow-500 "
                   >
                     anjunarnolia93750@gmail.com
                   </a>
@@ -303,7 +304,7 @@ export default function Header() {
                 </div>
                 <div className="flex flex-col ">
                   <p className="text-white text-xl"> Phone: </p>
-                  <p className="text-gray-400">+91 9728293750</p>
+                  <a href="tel:+919728293750" className="text-gray-400 hover:text-yellow-500">+91 9728293750</a>
                 </div>
               </div>
               <div className="flex gap-3">
@@ -317,7 +318,7 @@ export default function Header() {
               </div>
             </div>
             <div className="py-5">
-              <p className="text-2xl md:text-4xl text-white font-bold font-playfair">
+              <p className="text-2xl md:text-4xl text-white  font-bold font-playfair">
                 Contact With Me
               </p>
               <div className="flex flex-wrap md:space-x-6 gap-3  mt-6 text-2xl text-yellow-500">
