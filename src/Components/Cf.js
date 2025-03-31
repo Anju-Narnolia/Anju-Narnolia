@@ -19,8 +19,7 @@ function ContactForm() {
 
   async function handleSubmit(event) {
     event.preventDefault();
-    
-    const scriptURL = "https://script.google.com/macros/s/AKfycbwkB5D7hVjjQYGclM0wlZcTv-wOLCODBB_u2RWt2NexubOXhV3V99casztxY5pqf1rd/exec";
+   const scriptURL = "https://script.google.com/macros/s/AKfycbx3cfYPYnZ6OwiBSzE0c3gSzvs-3RLcohwdNPeFKbhI93Y_bk524H2lexhTH5f3A_I/exec";
 
     try {
       const response = await fetch(scriptURL, {
@@ -29,9 +28,10 @@ function ContactForm() {
         headers: {
           "Content-Type": "application/json",
         },
+        mode: "no-cors",
       });
 
-      if (response.ok) {
+      if (response) {
         setMsg("Thank you for reaching out! I’ll get back to you soon.");
         setFormData({ name: "", email: "", message: "" });
       } else {
