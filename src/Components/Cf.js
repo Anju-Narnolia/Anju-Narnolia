@@ -1,21 +1,19 @@
 import React, { useState, useEffect } from "react";
 
 function ContactForm() {
+  const [msg, setMsg] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
-
-  const [msg, setMsg] = useState("");
-
   useEffect(() => {
-    if (!msg) return; 
+    if (!msg) return;
     const timer = setTimeout(() => {
-      setMsg(""); 
+      setMsg("");
     }, 5000);
-    return () => clearTimeout(timer); 
-  }, [msg]); 
+    return () => clearTimeout(timer);
+  }, [msg]);
 
   function handleChange(event) {
     const { name, value } = event.target;
@@ -23,10 +21,21 @@ function ContactForm() {
       ...prevData,
       [name]: value,
     }));
+  
   }
-
+  function validateEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+  
   async function handleSubmit(event) {
     event.preventDefault();
+    const formData = new FormData(event.target);
+    const email = formData.get("email");
+    if (!validateEmail(email)) {
+      setMsg("Please enter a valid email address.");
+      return;
+    }
     const scriptURL =
       "https://script.google.com/macros/s/AKfycbx3cfYPYnZ6OwiBSzE0c3gSzvs-3RLcohwdNPeFKbhI93Y_bk524H2lexhTH5f3A_I/exec";
 
@@ -60,7 +69,10 @@ function ContactForm() {
       <form onSubmit={handleSubmit}>
         <div className="flex flex-col gap-2">
           <div className="py-2 px-3">
-            <label htmlFor="name" className="block mb-2 text-sm font-medium text-white">
+            <label
+              htmlFor="name"
+              className="block mb-2 text-sm font-medium text-white"
+            >
               Name
             </label>
             <input
@@ -74,7 +86,10 @@ function ContactForm() {
             />
           </div>
           <div className="py-2 px-3">
-            <label htmlFor="email" className="block mb-2 text-sm font-medium text-white">
+            <label
+              htmlFor="email"
+              className="block mb-2 text-sm font-medium text-white"
+            >
               Email
             </label>
             <input
@@ -88,7 +103,10 @@ function ContactForm() {
             />
           </div>
           <div className="py-2 px-3">
-            <label htmlFor="message" className="block mb-2 text-sm font-medium text-white">
+            <label
+              htmlFor="message"
+              className="block mb-2 text-sm font-medium text-white"
+            >
               Message
             </label>
             <textarea

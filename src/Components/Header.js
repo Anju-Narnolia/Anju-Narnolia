@@ -3,9 +3,9 @@ import React, { useState } from "react";
 import ContactForm from "./Cf";
 import ProjectG from "./ProjectG";
 import myPhoto from "../img/myPhoto.jpg";
+import { Helmet } from "react-helmet";
 
 export default function Header() {
-
   function scrollToSection(id) {
     const section = document.getElementById(id);
     if (section) {
@@ -16,6 +16,68 @@ export default function Header() {
   const [search, setSearch] = useState("all");
   return (
     <div id="home">
+      <Helmet>
+        <title>Anju Narnolia | Full Stack Web Developer</title>
+        <meta
+          name="description"
+          content="Anju Narnolia - Full Stack Web Developer specializing in React, JavaScript, Node.js, and modern web technologies. View my portfolio showcasing innovative web applications and development projects."
+        />
+        <meta
+          name="keywords"
+          content="Anju Narnolia, Web Developer, Full Stack Developer, React Developer, JavaScript Expert, Node.js Developer, Portfolio, Web Development, Frontend Developer, Software Engineer"
+        />
+        <meta name="author" content="Anju Narnolia" />
+        <meta name="robots" content="index, follow" />
+
+        {/* Open Graph */}
+        <meta
+          property="og:title"
+          content="Anju Narnolia | Full Stack Web Developer"
+        />
+        <meta
+          property="og:description"
+          content="Professional portfolio showcasing web development projects and technical expertise"
+        />
+        <meta
+          property="og:image"
+          content="https://anju-narnolia.netlify.app/static/media/myPhoto.817151b8a0a59d40ced8.jpg"
+        />
+        <meta property="og:url" content="https://anju-narnolia.netlify.app" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Anju Narnolia | Full Stack Web Developer"
+        />
+        <meta
+          name="twitter:description"
+          content="Professional portfolio showcasing web development projects and technical expertise"
+        />
+        <meta
+          name="twitter:image"
+          content="https://anju-narnolia.netlify.app/static/media/myPhoto.817151b8a0a59d40ced8.jpg"
+        />
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "http://schema.org",
+              "@type": "Person",
+              "name": "Anju Narnolia",
+              "jobTitle": "Full Stack Web Developer",
+              "url": "https://anju-narnolia.netlify.app",
+              "sameAs": [
+                "https://www.linkedin.com/in/anju-narnolia",
+                "https://github.com/Anju-Narnolia",
+                "https://twitter.com/AnjuNarnolia"
+              ],
+              "image": "https://anju-narnolia.netlify.app/static/media/myPhoto.817151b8a0a59d40ced8.jpg",
+              "description": "Full Stack Web Developer specializing in React, JavaScript, and modern web technologies"
+            }
+          `}
+        </script>
+      </Helmet>
       <section className="h-[100vh] flex items-center relative md:pt-24 bg-[#0E0E0E] p-5">
         <div className="absolute right-0 top-1/4 w-1/2 h-px bg-yellow-500/30"></div>
         <div className="absolute left-0 bottom-1/4 w-1/3 h-px bg-yellow-500/30"></div>
@@ -39,7 +101,6 @@ export default function Header() {
                 <button className=" bg-yellow-500 md:py-4 md:px-8 px-4 py-2 hover:shadow-yellow-500 shadow-[0_0_10px_2px] rounded-lg">
                   View My Work
                 </button>
-                <p></p>
               </p>
               <p
                 onClick={() => scrollToSection("contact")}
@@ -52,9 +113,9 @@ export default function Header() {
         </div>
       </section>
       {/* About me */}
-      <div className="p-5 md:p-10" id="about">
+      <div className="p-5 md:p-20" id="about">
         <div className="flex justify-center gap-16 flex-col md:flex-row">
-          <div className="w-full flex justify-center md:w-1/2">
+          <div className="w-full flex justify-center md:w-1/2 p-5">
             <div className="relative">
               <div className="md:w-96 md:h-96 w-60 h-60 rounded-full overflow-hidden border-4 border-yellow-500 animate-fade-in">
                 <img src={myPhoto} alt="me" />
@@ -98,7 +159,7 @@ export default function Header() {
       </div>
 
       {/* marque */}
-      <div className="marquee bg-white text-black w-full text-xl lg:text-3xl font-bold flex my-5 ">
+      <div className="marquee  text-white w-full text-xl lg:text-3xl font-bold flex my-5 ">
         <a href="#contact" className="mx-4 cursor-pointer">
           🚀 Open to Work!{" "}
         </a>
@@ -150,7 +211,7 @@ export default function Header() {
       </div>
 
       {/* my Expertise */}
-      <div className=" md:p-16 py-10 bg-[#0E0E0E]" id="expertise">
+      <div className=" md:p-20 py-10 bg-[#0E0E0E]" id="expertise">
         <p className="text-2xl md:text-4xl font-bold uppercase text-yellow-500  text-center font-playfair">
           My Expertise
         </p>
@@ -267,7 +328,7 @@ export default function Header() {
       </div>
 
       {/* Contact me */}
-      <div className="bg-[#0E0E0E] p-10" id="contact">
+      <div className="bg-[#0E0E0E] py-20 px-8" id="contact">
         <div className="pb-10 items-center flex  flex-col gap-5">
           <p className=" text-2xl md:text-4xl font-bold  uppercase  text-yellow-500  text-center font-playfair">
             Get In Touch
@@ -304,7 +365,12 @@ export default function Header() {
                 </div>
                 <div className="flex flex-col ">
                   <p className="text-white text-xl"> Phone: </p>
-                  <a href="tel:+919728293750" className="text-gray-400 hover:text-yellow-500">+91 9728293750</a>
+                  <a
+                    href="tel:+919728293750"
+                    className="text-gray-400 hover:text-yellow-500"
+                  >
+                    +91 9728293750
+                  </a>
                 </div>
               </div>
               <div className="flex gap-3">
@@ -328,7 +394,7 @@ export default function Header() {
                 <a href="https://github.com/Anju-Narnolia">
                   <i className="fa-brands fa-github cursor-pointer   border border-yellow-500 px-3 md:px-4 py-3 rounded-full hover:bg-yellow-500 hover:text-black transition-all duration-300"></i>
                 </a>
-                <a href="https://github.com/Anju-Narnolia">
+                <a href="https://pinterest.com/Anjunarnolia">
                   <i className="fa-brands fa-pinterest cursor-pointer  border border-yellow-500 px-3 md:px-4 py-3 rounded-full hover:bg-yellow-500 hover:text-black transition-all duration-300"></i>
                 </a>
                 <a href="https://www.instagram.com/anju__narnolia">
