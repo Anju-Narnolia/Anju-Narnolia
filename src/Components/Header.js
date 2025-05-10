@@ -196,6 +196,7 @@ export default function Header() {
             { id: 9, class: "fa-brands fa-node", color: "#339933" },
             { id: 10, class: "fa-brands fa-git", color: "#F05032" },
             { id: 11, class: "fa-brands fa-github", color: "#ffffff" },
+            { id: 12, class: "fa-solid fa-leaf", color: "#47A248" },
           ].map((skill, index) => (
             <motion.div
               key={skill.id}

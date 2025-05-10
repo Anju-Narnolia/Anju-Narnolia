@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import img from "../img/5287326.jpg";
 const projects = [
   {
     id: "1",
@@ -8,53 +7,64 @@ const projects = [
     description:
       "A platform connecting car owners with drivers. Features real-time chat and a booking system.",
     techStack: "React.js, Firebase,TailwindCss",
-    img: "https://via.placeholder.com/300",
-    githubLink: "https://github.com/username/driverridy",
-    viewLink: "https://driverridy-demo.com",
+    img: "https://res.cloudinary.com/ddmdhrwiu/image/upload/v1745791565/Screenshot_2025-04-01_at_6.16.32_PM_eqjqqf.png",
+    githubLink: "https://github.com/Anju-Narnolia/DriverRidey",
+    viewLink: "https://driverridey.netlify.app/",
   },
+  // {
+  //   id: "2",
+  //   title: "Ecommerce Platform",
+  //   Search: "react",
+  //   description:
+  //     "A modern eCommerce website with product listings, search functionality, and a seamless shopping experience.",
+  //   techStack: "React.js, Next.js",
+  //   img: "https://via.placeholder.com/300",
+  //   githubLink: "https://github.com/username/ecommerce-platform",
+  //   viewLink: "https://ecommerce-platform-demo.com",
+  // },
+
   {
-    id: "2",
-    title: "Ecommerce Platform",
-    Search: "react",
-    description:
-      "A modern eCommerce website with product listings, search functionality, and a seamless shopping experience.",
-    techStack: "React.js, Next.js",
-    img: "https://via.placeholder.com/300",
-    githubLink: "https://github.com/username/ecommerce-platform",
-    viewLink: "https://ecommerce-platform-demo.com",
-  },
-  {
-    id: "3",
+    id: "4",
     title: "ReadNews",
     Search: "react",
     description:
       "A responsive news platform allowing users to browse the latest news across various categories with real-time updates.",
     techStack: "React.js, Bootstrap, NewsAPI",
-    img: "https://via.placeholder.com/300",
-    githubLink: "https://github.com/username/readnews",
-    viewLink: "https://readnews-demo.com",
+    img: "https://res.cloudinary.com/ddmdhrwiu/image/upload/v1746883711/Screenshot_2025-05-10_at_6.34.50_PM_ceedtd.png",
+    githubLink: "https://github.com/Anju-Narnolia/ReadNews",
+    viewLink: "https://read-news.vercel.app/",
   },
+
   {
-    id: "4",
-    title: "Podcast Website",
+    id: "6",
+    title: "US School Pataudi",
     Search: "wordpress",
     description:
-      "A platform showcasing the power of podcasting for businesses with audio streaming and episode listings.",
-    techStack: "Wordpress",
-    img: "https://via.placeholder.com/300",
-    githubLink: "https://github.com/username/podcast-website",
-    viewLink: "https://podcast-website-demo.com",
+      "A dynamic and user-friendly school website designed using WordPress and Elementor, showcasing admissions, academics, gallery, and contact information with a modern layout.",
+    techStack: "WordPress, Elementor",
+    img: "https://res.cloudinary.com/ddmdhrwiu/image/upload/v1746883714/Screenshot_2025-05-10_at_6.51.11_PM_un26yb.png",
+    viewLink: "https://digitaltatsat.com/UPSCAKHADA/home/",
   },
   {
-    id: "5",
-    title: "Immigration Website",
+    id: "7",
+    title: "GreenCardVisa Services",
+    Search: "wordpress elementor",
+    description:
+      "A professional immigration service website built using WordPress and Elementor, offering information on green card eligibility, application steps, and consultation booking with a clean and modern design.",
+    techStack: "WordPress, Elementor",
+    img: "https://res.cloudinary.com/ddmdhrwiu/image/upload/v1746883714/Screenshot_2025-05-10_at_6.57.37_PM_fpg7ti.png",
+    viewLink: "https://www.greencardvisaservices.com/",
+  },
+  {
+    id: "3",
+    title: "GlamourSalon",
     Search: "html",
     description:
-      "An informative website providing guidance and resources for immigration processes with an intuitive user experience.",
-    techStack: "Wordpress",
-    img: "https://via.placeholder.com/300",
-    githubLink: "https://github.com/username/immigration-website",
-    viewLink: "https://immigration-website-demo.com",
+      "A modern and elegant salon website featuring service listings, pricing, testimonials, and a booking form with interactive UI animations.",
+    techStack: "HTML, CSS, JavaScript",
+    img: "https://res.cloudinary.com/ddmdhrwiu/image/upload/v1746883713/Screenshot_2025-05-10_at_6.32.54_PM_dutdlf.png",
+    githubLink: "https://github.com/Anju-Narnolia/saloon",
+    viewLink: "https://saloon-two.vercel.app/",
   },
 ];
 
@@ -66,10 +76,10 @@ function ProjectG({ result }) {
         .map((project) => (
           <motion.div
             key={project.id}
-            className="relative w-full h-64 overflow-hidden rounded-lg group"
+            className="relative w-full h-64 overflow-hidden rounded-lg group border border-gray-600"
           >
             <motion.img
-              src={img}
+              src={project.img}
               alt={project.title}
               className=" w-full h-full object-cover"
               whileHover={{ scale: 1.2 }}
@@ -94,17 +104,19 @@ function ProjectG({ result }) {
                   </p>
                 </div>
                 <div className="flex gap-3 justify-center">
+                 
+                    <a
+                      href={project.githubLink}
+                      className=" text-yellow-500 py-1 px-3 rounded hover:text-white font-bold"
+                    >
+                      <i className="fa-brands fa-github"></i>
+                    </a>
+                  
                   <a
                     href={project.viewLink}
-                    className="fa-brands fa-github text-yellow-500 py-1 px-3 rounded hover:text-white font-bold"
+                    className=" text-yellow-500 py-1 px-3 rounded  hover:text-white font-bold"
                   >
-                    
-                  </a>
-                  <a
-                    href={project.githubLink}
-                    className="fa-solid fa-share text-yellow-500 py-1 px-3 rounded  hover:text-white font-bold"
-                  >
-                    
+                    <i className="fa-solid fa-share"></i>
                   </a>
                 </div>
               </div>
