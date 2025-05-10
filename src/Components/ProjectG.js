@@ -48,7 +48,7 @@ const projects = [
   {
     id: "7",
     title: "GreenCardVisa Services",
-    Search: "wordpress elementor",
+    Search: "wordpress",
     description:
       "A professional immigration service website built using WordPress and Elementor, offering information on green card eligibility, application steps, and consultation booking with a clean and modern design.",
     techStack: "WordPress, Elementor",
