@@ -71,7 +71,7 @@ export default function Footer() {
       <div className=" flex justify-center py-5 md:mx-10 border-t-2 border-gray-400">
         <span className=" md:text-xl  lg:text-xl text-gray-400">
           Code by me, for you! &copy; {currentYear} Anju Narnolia . All rights
-          preserved.
+          Reserved.
         </span>
       </div>
     </div>
