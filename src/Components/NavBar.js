@@ -69,7 +69,7 @@ export default function NavBar() {
             </li>
             <li>
               <a
-                href="https://drive.google.com/file/d/1bHsTiyddJtZn5a3E2OQ8FykauhJRje69/view"
+                href="https://drive.google.com/file/d/1w81lApWW9d4dY2gb_UHD4R_tXY_WB2zJ/view?usp=sharing"
                 target="_blank"
                 rel="noreferrer"
                 className="hover:text-gray-300"
@@ -132,7 +132,7 @@ export default function NavBar() {
             </li>
             <li className="pt-2">
               <a
-                href="https://drive.google.com/file/d/1pV0g9g6wY0pzIDyNqlzIsruASsaYVNQG/view?usp=sharing"
+                href="https://drive.google.com/file/d/1w81lApWW9d4dY2gb_UHD4R_tXY_WB2zJ/view?usp=sharing"
                 target="_blank"
                 rel="noreferrer"
                 className="hover:text-gray-300"
