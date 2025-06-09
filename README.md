@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm Anju Narnolia</h1>
 <h3 align="center">Web Developer & Designer | Building Scalable & User-Friendly Web Solutions</h3>
 
-- 🔭 I’m currently working on **E-commerce**
+- 🔭 I’m currently working on **MERN Project**
 
 - 👨‍💻 All of my projects are available at [https://anju-narnolia.netlify.app/](https://anju-narnolia.netlify.app/)
 
