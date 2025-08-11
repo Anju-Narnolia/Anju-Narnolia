@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
-
+import { Label } from "../Components/ui/label";
+import { Input } from "../Components/ui/input";
+import { Textarea } from "../Components/ui/textarea";
 function ContactForm() {
   const [msg, setMsg] = useState("");
   const [formData, setFormData] = useState({
@@ -61,22 +63,23 @@ function ContactForm() {
     }
   }
 
-  return (
-    <div className="border border-opacity-30 border-yellow-500 bg-transparent text-white p-3 md:px-10 py-8">
+  return (<>
+  <div className="bg-gradient-to-br from-yellow-500 to-yellow-500 rounded-lg via-black p-[3px] shadow-[-2px_-2px_10px_rgba(255,255,0,0.5)]" >
+    <div className=" text-white p-3 lg:px-10 py-8 rounded-lg bg-[#0E0E0E] bg-gradient-to-br from-yellow-500/5 to-black " >
       <p className="text-2xl md:text-4xl text-yellow-500 font-bold font-playfair px-3">
         Send Me a Message
       </p>
       <form onSubmit={handleSubmit}>
         <div className="flex flex-col gap-2">
           <div className="py-2 px-3">
-            <label
+            <Label
               htmlFor="name"
               className="block mb-2 text-sm font-medium text-white"
             >
               Name
-            </label>
-            <input
-              className="rounded-md bg-gray-300 block w-full text-white p-1 focus:outline-none bg-opacity-10 border-opacity-30 border-yellow-500 border-2"
+            </Label>
+            <Input
+              className="rounded-md  text-white block w-full bg-black/80 p-1 focus:outline-none  border-opacity-30 border-yellow-500 border-2"
               type="text"
               name="name"
               placeholder="Your Name"
@@ -86,14 +89,14 @@ function ContactForm() {
             />
           </div>
           <div className="py-2 px-3">
-            <label
+            <Label
               htmlFor="email"
               className="block mb-2 text-sm font-medium text-white"
             >
               Email
-            </label>
-            <input
-              className="rounded-md bg-gray-300 block w-full text-white p-1 focus:outline-none bg-opacity-10 border-opacity-30 border-yellow-500 border-2"
+            </Label>
+            <Input
+              className="rounded-md text-white block w-full bg-black/80 p-1 focus:outline-none  border-opacity-30 border-yellow-500 border-2"
               type="email"
               name="email"
               placeholder="Your Email"
@@ -103,14 +106,14 @@ function ContactForm() {
             />
           </div>
           <div className="py-2 px-3">
-            <label
+            <Label
               htmlFor="message"
               className="block mb-2 text-sm font-medium text-white"
             >
               Message
-            </label>
-            <textarea
-              className="rounded-md bg-gray-300 block w-full text-white tracking-tighter border-opacity-30 bg-opacity-10 p-1 focus:outline-none h-20 border-yellow-500 border-2"
+            </Label>
+            <Textarea
+              className="rounded-md text-white block w-full bg-black/80 p-1 focus:outline-none h-20 border-yellow-500 border-2"
               name="message"
               placeholder="Write Your Message Here"
               value={formData.message}
@@ -120,7 +123,7 @@ function ContactForm() {
           </div>
           <div className="flex justify-center m-2">
             <button
-              className="bg-yellow-500/80 hover:bg-yellow-500 hover:shadow-yellow-500 shadow-[0_0_5px_2px] text-black rounded-md font-bold px-14 py-2"
+              className="bg-yellow-500/80 hover:bg-black hover:text-white border-yellow-500 hover:border-black border hover:shadow-yellow-500 shadow-[0_0_5px_2px] text-black rounded-md font-bold w-full py-2"
               type="submit"
             >
               Submit
@@ -130,6 +133,10 @@ function ContactForm() {
         </div>
       </form>
     </div>
+    </div>
+    </>
+
+
   );
 }
 

@@ -35,7 +35,7 @@ export default function NavBar() {
           <p className="text-white">Anju </p>
           <p className="text-yellow-500 "> Narnolia</p>
         </div>
-        <nav className="hidden md:flex items-center">
+        <nav className="hidden lg:flex items-center">
           <ul className="flex gap-5 font-bold items-center">
             <li
               onClick={() => scrollToSection("home")}
@@ -88,7 +88,7 @@ export default function NavBar() {
             </li>
           </ul>
         </nav>
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <button onClick={() => setMenuOpen(!menuOpen)} className="text-4xl">
             {menuOpen ? "\u2715":"\u2261"}
           </button>
@@ -97,7 +97,7 @@ export default function NavBar() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden bg-black text-white p-4">
+        <div className="lg:hidden bg-black text-white p-4">
           <ul className="flex flex-col gap-4 font-bold">
             <li
               onClick={() => scrollToSection("home")}

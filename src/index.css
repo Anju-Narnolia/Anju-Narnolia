@@ -15,18 +15,6 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.marquee {
-  white-space: nowrap;
-  overflow: hidden;
-  display: inline-flex;
-  animation: marquee 20s linear infinite;
-}
 
-@keyframes marquee {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
+
+
