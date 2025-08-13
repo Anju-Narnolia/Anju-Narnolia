@@ -20,7 +20,7 @@ export default function Skills() {
       <p className="text-2xl md:text-4xl font-bold uppercase text-yellow-500  text-center font-playfair py-4  ">
         Skills
       </p>
-      <div className="w-full flex-col flex bg-[#0c0c04] rounded-lg">
+      <div className="w-full flex-col flex bg-[#24240c]/80 rounded-lg">
         <p className="font-semibold text-center text-xl md:text-2xl p-5 text-white">
           The skill, tools and technology I use:
         </p>

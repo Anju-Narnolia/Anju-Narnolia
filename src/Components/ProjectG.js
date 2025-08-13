@@ -22,7 +22,7 @@ const data = [
       "Health Pal AI is an AI-driven health assistant that helps users analyze symptoms and get tailored wellness suggestions.",
     content:
       "It offers diet recommendations, mental health support, and a user-friendly interface.Built with React and Tailwind CSS, it ensures speed, accessibility, and an engaging experience.",
-    github: "https://github.com/Anju-Narnolia/HealthPal-Ai",
+    github: "https://github.com/Anju-Narnolia/HealthPal",
     live: "https://healthpal-ai.netlify.app/",
   },
 ];

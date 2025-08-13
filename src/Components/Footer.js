@@ -3,7 +3,7 @@ import FloatingDock from "../Components/ui/floating-dock";
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   return ( 
-    <div className="w-full bg-gradient-to-t from-black to-[#0c0c04] p-10">
+    <div className="w-full bg-gradient-to-t from-black to-[#24240c]/80 p-10">
       <div className="flex md:p-10 flex-col lg:flex-row items-center justify-center">
         <div className="flex flex-col gap-2 lg:w-1/2">
           <div className="flex gap-1 items-center text-2xl md:text-4xl font-playfair uppercase font-bold">

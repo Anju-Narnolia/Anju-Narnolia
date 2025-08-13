@@ -51,7 +51,7 @@ export default function Header() {
             </div>
           </AnimateOnScroll>
           <AnimateOnScroll animation="animate-fadeIn lg:px-10">
-            <div className="flex-1 flex justify-center items-center lg:pl-20">
+            <div className="flex-1 justify-center items-center lg:pl-20 hidden lg:flex">
               <img src={hero} width={500} alt="hero img" className=" w-72 lg:w-96"  />
             </div>
           </AnimateOnScroll>
@@ -60,7 +60,6 @@ export default function Header() {
 
       {/* About Section */}
       <AnimateOnScroll animation="animate-slideUp py-10">
-
         <Achievement />
       </AnimateOnScroll>
 
@@ -73,12 +72,12 @@ export default function Header() {
 
       {/* my Expertise */}
       <AnimateOnScroll animation="animate-slideUp">
-        <div className=" lg:p-20 py-10 bg-[#0c0c04]/80 m-5 md:m-16" id="expertise">
+        <div className=" lg:p-20 py-10 bg-[#24240c]/80 m-5 md:m-16" id="expertise">
           <p className="text-2xl lg:text-4xl font-bold uppercase text-yellow-500  text-center font-playfair">
             My Expertise
           </p>
-          <div className=" flex flex-col text-white px-14 lg:w-10/12 justify-center">
-            <div className="flex flex-col justify-start lg:w-3/5 p-5 rounded-md  mx-5 mt-5  border-2 border-yellow-500 hover:shadow-[0_0_19px_1px] hover:shadow-amber-500 hover:scale-105 duration-500 hover:bg-opacity-10 hover:bg-white">
+          <div className=" flex flex-col text-white px-5 lg:w-10/12 justify-center">
+            <div className="flex flex-col justify-start lg:w-3/5 p-5 rounded-md bg-[#0c0c04]  mx-5 mt-5  border-2 border-yellow-500 hover:shadow-[0_0_19px_1px] hover:shadow-amber-500 hover:scale-105 duration-500 hover:bg-opacity-10 hover:bg-white">
               <div className="flex justify-start gap-5 p-2">
                 <i className="fa-solid fa-desktop text-3xl rounded-md text-yellow-500 "></i>
                 <p className="font-bold text-xl justify-center font-playfair">
@@ -93,11 +92,11 @@ export default function Header() {
               </span>
             </div>
             <div className="h-10 w-1/2 border-r-2 border-yellow-500 "></div>
-            <div className=" flex flex-col lg:ml-80 lg:w-3/5 p-5 rounded-md border-2 border-yellow-500 hover:shadow-[0_0_19px_1px] hover:shadow-amber-500 hover:scale-105 duration-500 hover:bg-opacity-10 hover:bg-white">
+            <div className=" flex flex-col lg:ml-60 lg:w-3/5 p-5 bg-[#0c0c04] rounded-md border-2 border-yellow-500 hover:shadow-[0_0_19px_1px] hover:shadow-amber-500 hover:scale-105 duration-500 hover:bg-opacity-10 hover:bg-white">
               <div className="flex justify-start gap-5 p-2 ">
                 <i className="fa-solid fa-code text-3xl rounded-md text-yellow-500 "></i>
                 <p className="font-bold text-xl font-playfair">
-                  Website Design & Development{" "}
+                  Website Design & Development
                 </p>
               </div>
               <span className="">
@@ -107,7 +106,7 @@ export default function Header() {
               </span>
             </div>
             <div className="h-10 w-1/2 border-r-2 border-yellow-500 "></div>
-            <div className="p-5  mx-5 rounded-md lg:w-3/5  border-2 border-yellow-500 hover:shadow-[0_0_19px_1px] hover:shadow-amber-500 hover:scale-105 duration-500 hover:bg-opacity-10 hover:bg-white">
+            <div className="p-5  mx-5 rounded-md lg:w-3/5 bg-[#0c0c04] border-2 border-yellow-500 hover:shadow-[0_0_19px_1px] hover:shadow-amber-500 hover:scale-105 duration-500 hover:bg-opacity-10 hover:bg-white">
               <div className="flex justify-start gap-5 p-2 ">
                 <i className="fa-brands fa-wordpress text-3xl text-yellow-500  rounded-md"></i>
                 <p className="font-bold text-xl font-playfair">Wordpress</p>
@@ -119,7 +118,7 @@ export default function Header() {
               </span>
             </div>
             <div className="h-10 w-1/2 border-r-2 border-yellow-500 "></div>
-            <div className="lg:ml-80 lg:w-3/5 p-5 rounded-md border-2 border-yellow-500 hover:shadow-[0_0_19px_1px] hover:shadow-amber-500 hover:scale-105 duration-500 hover:bg-opacity-10 hover:bg-white flex flex-col">
+            <div className="lg:ml-60 lg:w-3/5 p-5 rounded-md border-2 bg-[#0c0c04] border-yellow-500 hover:shadow-[0_0_19px_1px] hover:shadow-amber-500 hover:scale-105 duration-500 hover:bg-opacity-10 hover:bg-white flex flex-col">
               <div className="flex justify-start gap-5 p-2">
                 <i className="fa-solid fa-pen-to-square  text-3xl  rounded-md text-yellow-500 "></i>
                 <p className="font-bold text-xl font-playfair">
@@ -138,8 +137,8 @@ export default function Header() {
       </AnimateOnScroll>
 
       {/* project */}
-      <AnimateOnScroll id="project" className="p-5 animate-slideUp">
-        <div className="px-5 py-14 text-center flex  flex-col items-center ">
+      <AnimateOnScroll id="project" className="p-5 animate-slideUp" >
+        <div className="px-5 py-14 text-center flex  flex-col items-center " id="project">
           <h1 className=" text-2xl md:text-4xl font-bold  uppercase  text-yellow-500  text-center font-playfair">
             My Projects
           </h1>
@@ -165,7 +164,7 @@ export default function Header() {
             </span>
           </div>
         </AnimateOnScroll>
-        <div className="grid grid-cols-1 lg:grid-cols-2 p-10 bg-[#0c0c04]/80">
+        <div className="grid grid-cols-1 lg:grid-cols-2 p-10 bg-[#24240c]/80">
           <AnimateOnScroll className="animate-fadeIn">
             <div className="flex flex-col items-center justify-center lg:justify-start lg:items-start lg:pl-5">
               <div className="flex flex-col gap-5">
@@ -214,7 +213,7 @@ export default function Header() {
                 <p className="text-2xl md:text-4xl text-white  font-bold font-playfair">
                   Contact With Me
                 </p>
-                <div className="flex flex-wrap md:space-x-6 gap-3  mt-6 text-2xl text-yellow-500">
+                <div className="flex flex-wrap md:space-x-4 gap-3  mt-6 text-xl md:text-2xl text-yellow-500">
                   <a href="https://www.linkedin.com/in/anju-narnolia-">
                     <i className="fa-brands fa-linkedin cursor-pointer   border border-yellow-500 px-3 md:px-4 py-3 rounded-full hover:bg-yellow-500 hover:text-black transition-all duration-300 p"></i>
                   </a>

@@ -65,7 +65,7 @@ export default function Achievement() {
             engagement.
           </p>
           <div className="grid grid-cols-2 gap-4">
-            <a href="https://driverridey.vercel.app/">
+            <a href="https://driverridey.netlify.app/" target="_blank" rel="noreferrer">
               <img
                 src="https://res.cloudinary.com/ddmdhrwiu/image/upload/v1754927753/Screenshot_2025-08-11_at_9.12.12_PM_poywsp.png"
                 alt="startup template"
@@ -73,7 +73,7 @@ export default function Achievement() {
                 height={500}
               />{" "}
             </a>
-            <a href="https://driverridey.vercel.app/">
+            <a href="https://driverridey.netlify.app/" target="_blank" rel="noreferrer">
               <img
                 src="https://res.cloudinary.com/ddmdhrwiu/image/upload/v1754927746/Screenshot_2025-08-11_at_9.13.51_PM_gvyi1u.png"
                 alt="startup template"
