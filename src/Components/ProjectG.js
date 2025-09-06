@@ -25,4 +25,15 @@ const data = [
     github: "https://github.com/Anju-Narnolia/HealthPal",
     live: "https://healthpal-ai.netlify.app/",
   },
+  {
+    category: "React , Redux , Tailwind , Node , Express , Mongodb , OpenAI ",
+    title: "Job Assistant",
+    src: "https://res.cloudinary.com/ddmdhrwiu/image/upload/v1757164010/Screenshot_2025-09-06_at_6.23.02_PM_ltqwcd.png  ",
+    heading:
+      "A full-stack AI chat application featuring a personalized assistant of Anju Narnolia that aids in job applications, HR screenings, and technical interviews.",
+    content:"A full-stack AI chat application built with React, Redux, Tailwind, Node.js, Express, MongoDB, and OpenAI to assist with job applications, HR screenings, and technical interviews. It features a personalized AI assistant of Anju Narnolia, delivering intelligent, context-aware responses based on her profile, experience, and achievements",
+    github: "https://github.com/Anju-Narnolia/my-job-assistent",
+    live: "https://my-job-assistent.vercel.app/",
+  },
 ];
+
