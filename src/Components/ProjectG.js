@@ -44,9 +44,10 @@ const data = [
       "A full-stack travel management platform designed to simplify trip planning, bookings, and itinerary management for users. Built with React, Redux, Tailwind CSS, Node.js, Express, and MongoDB, Yatra Bundle offers a seamless travel experience with a modern interface and scalable backend.",
       content:
         "It allows users to browse destinations, compare packages, book trips, and manage itineraries all in one place. With secure authentication and a user-friendly dashboard, Yatra Bundle ensures smooth travel planning for individuals and groups.",
-    github: "https://github.com/Anju-Narnolia/yatra-bundles",
+    github: "https://github.com/Anju-Narnolia/YatraBundles",
     live: "https://yatra-bundles.vercel.app/",
   },
 ];
+
 
 
